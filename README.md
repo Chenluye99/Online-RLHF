@@ -175,7 +175,7 @@ CUDA_VISIBLE_DEVICES=7 python ./generation/gen_hf2.py --model_name_or_path ${inf
 
 # then, we merge the 8 datasets into one dataset.
 wait
-python ./generation/merge_data.py --base_path ${output_dir} --output_dir ./data/gen_data.json --num_datasets ${my_world_size}
+python ./generation/merge_data.py --base_path ${output_dir} --output_dir ./data/gen_data.jsonl --num_datasets ${my_world_size}
 ```
 
 We can also use API server to generate new responses.
